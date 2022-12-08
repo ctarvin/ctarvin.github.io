@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="CSS/index.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="nav-links">
+                <a href="https://www.ou.edu/price"
+                    ><img src="Pictures/OU logo.png" alt="OU Logo"
+                /></a>
+                <a href="Index.html"><button class="home">Home</button></a>
+                <a href="about_us.html"><button class="aboutUs">About Us</button></a>
+                <a
+                    target="_blank"
+                    href="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23D50000&ctz=America%2FChicago&src=MnJmNmtrMzdsNm9xbDZjMThqMTdpbXI1Z3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MzN2NG9jbjZuaG45dDMxZGo3dmp2c3NxMm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300&color=%23E4C441&showPrint=0&showDate=1&mode=WEEK"
+                    ><button class="calendar">Calendar</button></a
+                >
+            </nav>
+            <a href="login.html"><button class="helpButton">TA Login</button></a>
+        </header>
+
+        <section class="counter">
+            <div class="counter_container">
+                <h1 class="student_text">Students Being Helped:</h1>
+                <h2 id="number">0</h2>
+                <div>
+                    <button
+                        class="counter_button"
+                        style="background-color: #de5246"
+                        onclick="subtractOne()">
+                        -
+                    </button>
+                    <button class="counter_button" id="clear" onclick="clearAll()">AC</button>
+                    <button
+                        class="counter_button"
+                        style="background-color: #1aa260"
+                        onclick="addOne()">
+                        +
+                    </button>
+                </div>
+                <h1 class="estimatedTime" id="estimatedTime">Estimated Wait Time: 0 Minutes</h1>
+                <p>
+                    Don't wanna wait in line? &RightArrow; Submit a ticket with what you need help
+                    with!
+                </p>
+            </div>
+        </section>
+
+        <section class="helpForm">
+            <form id="task-form">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input required type="text" id="task-name" placeholder="Name" />
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input required placeholder="example@ou.edu" type="email" id="task-email" />
+                </div>
+
+                <div>
+                    <label for="date">Date:</label>
+                    <input required type="date" id="task-date" />
+                </div>
+
+                <div>
+                    <label for="course">Choose a Class:</label>
+                    <select required placeholder="course" id="task-course">
+                        <option selected="" disabled="" hidden="" value="none">
+                            Select Option
+                        </option>
+                        <option value="MIS 2113">Intro To MIS</option>
+                        <option value="MIS 3013">Programming I</option>
+                        <option value="MIS 3033">Programming II</option>
+                        <option value="MIS 3383">Electronic Business</option>
+                        <option value="MIS 3353">Databases</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="Professor">Choose a Professor:</label>
+                    <select required placeholder="Professor" id="task-professor">
+                        <option selected="" disabled="" hidden="" value="none">
+                            Select Option
+                        </option>
+                        <option value="Adam">Adam</option>
+                        <option value="Clarke">Clarke</option>
+                        <option value="Dr. Beatty">Dr. Beatty</option>
+                        <option value="Dr. Bellah">Dr. Bellah</option>
+                        <option value="Dr. Feng">Dr. Feng</option>
+                        <option value="Swetha">Swetha</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="description">Description of Problem or Question:</label>
+                    <textarea
+                        required
+                        id="task-description"
+                        placeholder="Description"
+                        rows="3"></textarea>
+                </div>
+
+                <button
+                    id="btn-task-save"
+                    value="submit"
+                    for="task-form"
+                    type="submit"
+                    class="formSubmit">
+                    Submit
+                </button>
+            </form>
+        </section>
+
+        <script src="JS/counter.js"></script>
+        <script type="module" src="JS/index.js"></script>
+    </body>
+</html>
